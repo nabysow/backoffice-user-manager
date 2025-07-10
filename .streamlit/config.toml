@@ -1,36 +1,15 @@
-[global]
-# Development settings
-developmentMode = true
-
 [server]
-# Server configuration
-headless = true
-port = 8501
-address = "0.0.0.0"
-
-# Enable CORS for development
+headless = false
 enableCORS = false
 enableXsrfProtection = false
-
-# File upload settings
 maxUploadSize = 50
 
 [browser]
-# Browser settings
 gatherUsageStats = false
-serverAddress = "localhost"
-serverPort = 8501
 
 [theme]
-# Theme configuration
 primaryColor = "#FF6B6B"
 backgroundColor = "#FFFFFF"
 secondaryBackgroundColor = "#F0F2F6"
 textColor = "#262730"
 font = "sans serif"
-
-[client]
-# Client configuration
-caching = true
-displayEnabled = true
-showErrorDetails = true

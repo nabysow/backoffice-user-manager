@@ -55,6 +55,25 @@ A Streamlit-based web application for managing backoffice users with Azure integ
    streamlit run app.py
    ```
 
+## 🚀 Quick Demo
+
+You can run the application immediately in **demo mode** without Azure configuration:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+```
+
+The app will automatically detect missing Azure configuration and run in demo mode with:
+- ✅ Sample user data
+- ✅ All UI features working
+- ✅ Form submissions with demo responses
+- ✅ CSV template downloads
+- ⚠️ "Demo Mode" indicators throughout the UI
+
 ## Configuration
 
 ### Azure Setup
