@@ -1,6 +1,11 @@
 # Environment files with secrets
 .env
+.env.production
 .streamlit/secrets.toml
+
+# Production deployment logs
+deployment.log
+*.log
 
 # Python
 __pycache__/
