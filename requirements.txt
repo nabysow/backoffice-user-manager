@@ -1,0 +1,8 @@
+streamlit
+azure-keyvault-secrets
+azure-identity
+azure-mgmt-containerinstance
+pandas
+python-dotenv
+streamlit-authenticator
+azure-monitor-opentelemetry

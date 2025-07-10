@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backoffice-user-manager:
+    build: 
+      context: ..
+      dockerfile: deployment/Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      - KEYVAULT_URL=${KEYVAULT_URL}
+      - USERS_SECRET_NAME=${USERS_SECRET_NAME}
+      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID}
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID}
+      - LOG_ANALYTICS_WORKSPACE_ID=${LOG_ANALYTICS_WORKSPACE_ID}
+    volumes:
+      - ../:/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  default:
+    name: backoffice-network
